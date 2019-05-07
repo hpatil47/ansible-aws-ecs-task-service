@@ -4,21 +4,21 @@
 #Example var file for create ecs task definition and service, attach to target group and run task
 task_service:
   #AWS region where run ecs cluster
-  aws_ecs_region: "eu-central-1"
+  aws_ecs_region: "ap-south-1"
   #Example task name
-  aws_ecs_task_name: "example-task"
+  aws_ecs_task_name: "nginx-task"
   #Example application name
-  aws_ecs_app_name: "example-app"
+  aws_ecs_app_name: "nginx-app"
   #Example target group where are your to want attach service. The target group should be created.
   #To create the target group you can use https://github.com/unicanova/ansible-lc-asg-aws 
-  aws_ecs_tg_name: "exapmle-tg"
+  aws_ecs_tg_name: "my-tg"
   #Example ecs cluster name where are your to want attach service. The ecs ecs cluster should be created.
   #To create the ecs ecs cluster you can use https://github.com/unicanova/ansible-lc-asg-aws 
   aws_ecs_cluster_name: "example-ecs-cluster"
   #Example ecs service name
-  aws_ecs_service_name: "example-service"
+  aws_ecs_service_name: "nginx-service"
   #Example ecs role
-  aws_ecs_ecs_role: "arn:aws:iam::123456789012:role/ecsServiceRole"
+  aws_ecs_ecs_role: "arn:aws:iam::394510651405:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
   #Image name, you can use image from docker public hub or private registry
   aws_ecs_image: "nginx"
   #A revision number for the ecs task definition
